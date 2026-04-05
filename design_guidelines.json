@@ -1,0 +1,100 @@
+{
+  "theme": "dark",
+  "archetype": "Swiss & High-Contrast with Jewel/Luxury elements",
+  "domain": "Security Services, Corporate B2B",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Manrope",
+    "setup_instructions": "yarn add @fontsource/cabinet-grotesk @fontsource/manrope",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-7xl tracking-tighter font-black uppercase",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "h4": "text-lg sm:text-xl font-semibold",
+      "body": "text-base leading-relaxed text-slate-300",
+      "overline": "text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-yellow-500"
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#050810",
+      "secondary": "#0A0F1C",
+      "tertiary": "#111827"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#9CA3AF",
+      "inverse": "#000000"
+    },
+    "brand": {
+      "primary": "#EAB308",
+      "primary_hover": "#CA8A04",
+      "secondary": "#10B981",
+      "secondary_hover": "#059669"
+    },
+    "surface": {
+      "glass": "bg-white/5 backdrop-blur-xl border border-white/10",
+      "solid": "bg-slate-900 border border-slate-800"
+    }
+  },
+  "layout": {
+    "spacing": {
+      "section_padding": "py-24 md:py-32",
+      "gap": "gap-8 md:gap-12"
+    },
+    "grid": {
+      "bento_marketing": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8",
+      "control_room": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    },
+    "container": "max-w-7xl mx-auto px-6 md:px-8 lg:px-12",
+    "geometry": "sharp edges, rounded-none for all components"
+  },
+  "motion": {
+    "hover": "transition-all duration-300 ease-out",
+    "button_hover": "hover:bg-yellow-400 hover:text-black hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(234,179,8,0.3)]",
+    "card_hover": "hover:border-white/20 hover:bg-white/10 transition-colors duration-300"
+  },
+  "components": {
+    "button": {
+      "primary": "bg-yellow-500 text-black font-bold px-8 py-4 rounded-none hover:bg-yellow-400 transition-all uppercase tracking-wider text-sm inline-flex items-center justify-center",
+      "secondary": "bg-transparent border border-white/20 text-white px-8 py-4 rounded-none hover:bg-white hover:text-black transition-all uppercase tracking-wider text-sm inline-flex items-center justify-center"
+    },
+    "card": "bg-[#0A0F1C] border border-white/10 p-8 rounded-none hover:border-yellow-500/50 transition-colors group",
+    "input": "bg-[#050810] border border-white/10 text-white px-4 py-3 rounded-none focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 w-full placeholder:text-slate-600",
+    "label": "text-sm uppercase tracking-wider text-slate-400 font-semibold mb-2 block",
+    "navigation": "fixed top-0 w-full z-50 bg-[#050810]/80 backdrop-blur-xl border-b border-white/10"
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1759092913686-5ce5f9da67fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwbmlnaHR8ZW58MHx8fHwxNzc1NDI2NDEyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Modern office building exterior at night",
+      "usage": "Hero section background with a heavy dark gradient overlay: bg-gradient-to-r from-[#050810]/90 via-[#050810]/70 to-transparent"
+    },
+    "services": {
+      "manned_guarding": {
+        "url": "https://images.unsplash.com/photo-1770529933902-d2f7851be31c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMGd1YXJkJTIwdW5pZm9ybXxlbnwwfHx8fDE3NzU0MjY0MTF8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Security guards in uniform"
+      },
+      "cctv": {
+        "url": "https://images.pexels.com/photos/4059469/pexels-photo-4059469.jpeg",
+        "alt": "CCTV Camera at night"
+      },
+      "construction": {
+        "url": "https://images.unsplash.com/photo-1771161582715-36fddd1242a5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwbmlnaHQlMjBsaWdodHN8ZW58MHx8fHwxNzc1NDI2Mzk2fDA&ixlib=rb-4.1.0&q=85",
+        "alt": "Construction site night lights"
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "INSTALLATION: Run `yarn add @phosphor-icons/react @studio-freight/react-lenis react-fast-marquee framer-motion @fontsource/cabinet-grotesk @fontsource/manrope`",
+    "ICONS: Use @phosphor-icons/react with `weight='duotone'` for a premium tech feel across all service icons and UI elements.",
+    "AESTHETIC: Strictly follow Archetype 4 (Swiss Brutalist High-Contrast) adapted for Security. Use sharp corners (`rounded-none`), heavy typography, and stark 1px borders (`border-white/10`). Avoid soft rounded corners and excessive shadows. Keep it rigid, authoritative, and secure.",
+    "ROUTING: Since it's a Marketing site with multiple pages (Home, About, Services, Pricing, Careers, Contact), ensure a proper client-side routing setup (e.g. react-router-dom) or a long-scrolling landing page structure if preferred. The prompt requests 'Pages Required', so implement separate routes or well-defined hash-linked sections.",
+    "LAYOUT: Apply the BENTO Grid Protocol for the Services section. Do NOT make all cards the same size. Make the most important service (e.g., Manned Guarding) a large span (`md:col-span-8 row-span-2`) and others smaller (`col-span-4`). Use images from the media object as background covers on these bento cards with an overlay.",
+    "HERO SECTION: Must use the `hero_background` image with a very heavy dark overlay so the white and gold text pops. Ensure the overlay is something like `bg-[#050810]/80` so the image acts as texture rather than a distracting photograph.",
+    "FORMS: The Contact, Get a Quote, and Careers pages need robust, highly styled forms. Use raw HTML/Tailwind for structural layout and Shadcn primitives internally if needed, heavily modified to be square/sharp. Add a CV Upload dropzone area for Careers.",
+    "MARQUEE: Add a slow, low-contrast marquee of 'Industries We Serve' or 'Trust Badges' using `react-fast-marquee`. Make the text uppercase and widely tracked.",
+    "ACCESSIBILITY & TESTING: Every interactive element (buttons, form inputs, links, accordion headers) MUST have a `data-testid` attribute in kebab-case based on role (e.g. `data-testid='hero-cta-button'`).",
+    "ANIMATION: Use Framer Motion for scroll-triggered fade-ups and micro-interactions. Use Lenis for smooth momentum scrolling on the main wrapper."
+  ]
+}

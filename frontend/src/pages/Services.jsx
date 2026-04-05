@@ -52,12 +52,15 @@ export default function Services() {
               const Icon = iconMap[service.icon] || Shield;
               const isEven = index % 2 === 0;
               return (
-                <motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} data-testid={`service-item-${service.slug}`} className="bg-[#0A0F1C] border border-white/10 hover:border-yellow-500/50 transition-colors">
+                <motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} data-testid={`service-item-${service.slug}`} className="bg-[#0A0F1C] border border-white/10 hover:border-yellow-500/50 transition-colors overflow-hidden">
                   <div className={`grid md:grid-cols-2`}>
                     <div className={`relative h-64 md:h-auto min-h-[300px] ${isEven ? "" : "md:order-2"}`}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-transparent" />
+                      {service.image ? (
+                        <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" />
+                      ) : null}
+                      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F1C]/80 to-transparent" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <Icon weight="duotone" className="w-32 h-32 text-yellow-500/30" />
+                        <Icon weight="duotone" className="w-24 h-24 text-yellow-500/50" />
                       </div>
                     </div>
                     <div className={`p-8 md:p-12 flex flex-col justify-center ${isEven ? "" : "md:order-1"}`}>

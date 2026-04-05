@@ -9,7 +9,7 @@ const iconMap = { Buildings, Storefront, Crane, House, Ticket };
 
 const industryDetails = {
   corporate: { image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800", features: ["Reception Security", "Access Control", "Executive Protection", "CCTV Monitoring", "Patrol Services"] },
-  retail: { image: "https://images.unsplash.com/photo-1567449303078-57ad995bd17f?w=800", features: ["Loss Prevention", "Customer Safety", "Stock Protection", "Staff Training", "Incident Response"] },
+  retail: { image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800", features: ["Loss Prevention", "Customer Safety", "Stock Protection", "Staff Training", "Incident Response"] },
   construction: { image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800", features: ["Site Patrols", "Equipment Protection", "Access Management", "Fire Watch", "Health & Safety"] },
   residential: { image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800", features: ["Gate Security", "Patrol Services", "CCTV Systems", "Visitor Management", "Emergency Response"] },
   events: { image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800", features: ["Crowd Control", "VIP Protection", "Bag Searches", "Emergency Planning", "Steward Services"] },

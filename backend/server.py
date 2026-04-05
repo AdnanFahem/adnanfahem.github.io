@@ -135,6 +135,7 @@ class Service(BaseModel):
     description: str
     icon: str
     features: List[str]
+    image: Optional[str] = None
 
 class Industry(BaseModel):
     id: str
@@ -142,6 +143,7 @@ class Industry(BaseModel):
     slug: str
     description: str
     icon: str
+    image: Optional[str] = None
 
 class FAQ(BaseModel):
     id: str
@@ -164,38 +166,50 @@ TESTIMONIALS = [
 SERVICES = [
     Service(id="1", title="Manned Guarding", slug="manned-guarding", icon="UserCircle",
             description="Professional SIA-licensed security officers providing 24/7 protection for your premises. Our guards are trained in conflict resolution, first aid, and emergency response.",
-            features=["24/7 Coverage", "SIA Licensed Officers", "Incident Reporting", "Access Control", "Patrol Services"]),
+            features=["24/7 Coverage", "SIA Licensed Officers", "Incident Reporting", "Access Control", "Patrol Services"],
+            image="https://images.pexels.com/photos/7714723/pexels-photo-7714723.jpeg?auto=compress&cs=tinysrgb&w=800"),
     Service(id="2", title="Event Security", slug="event-security", icon="Calendar",
             description="Comprehensive security solutions for events of all sizes, from corporate functions to large-scale festivals. We ensure your event runs smoothly and safely.",
-            features=["Crowd Management", "VIP Protection", "Access Control", "Emergency Planning", "Steward Services"]),
+            features=["Crowd Management", "VIP Protection", "Access Control", "Emergency Planning", "Steward Services"],
+            image="https://images.unsplash.com/photo-1762698070244-731ae64e5ff6?w=800"),
     Service(id="3", title="Construction Site Security", slug="construction-security", icon="HardHat",
             description="Protect your construction site from theft, vandalism, and unauthorized access. Our guards monitor your valuable equipment and materials around the clock.",
-            features=["24/7 Site Patrols", "Equipment Protection", "Access Logging", "Fire Watch", "Health & Safety Compliance"]),
+            features=["24/7 Site Patrols", "Equipment Protection", "Access Logging", "Fire Watch", "Health & Safety Compliance"],
+            image="https://images.unsplash.com/photo-1569991373898-a2e013b043f4?w=800"),
     Service(id="4", title="CCTV Monitoring", slug="cctv-monitoring", icon="Eye",
             description="State-of-the-art remote CCTV monitoring from our central control room. Real-time surveillance with immediate incident response.",
-            features=["24/7 Monitoring", "Instant Alerts", "Video Analytics", "Cloud Storage", "Remote Access"]),
+            features=["24/7 Monitoring", "Instant Alerts", "Video Analytics", "Cloud Storage", "Remote Access"],
+            image="https://images.pexels.com/photos/30692441/pexels-photo-30692441.jpeg?auto=compress&cs=tinysrgb&w=800"),
     Service(id="5", title="Mobile Patrols", slug="mobile-patrols", icon="Car",
             description="Regular mobile security patrols covering multiple sites. Cost-effective security solution with visible deterrence and rapid response capability.",
-            features=["Scheduled Patrols", "Random Checks", "Incident Response", "Key Holding", "Alarm Response"]),
+            features=["Scheduled Patrols", "Random Checks", "Incident Response", "Key Holding", "Alarm Response"],
+            image="https://images.unsplash.com/photo-1763569378578-782df27f07e7?w=800"),
     Service(id="6", title="Retail Security", slug="retail-security", icon="ShoppingBag",
             description="Specialized retail security to prevent shoplifting, manage customer flow, and ensure a safe shopping environment for customers and staff.",
-            features=["Loss Prevention", "Customer Service", "CCTV Monitoring", "Staff Training", "Incident Management"]),
+            features=["Loss Prevention", "Customer Service", "CCTV Monitoring", "Staff Training", "Incident Management"],
+            image="https://images.unsplash.com/photo-1758520387811-7b406f7225bf?w=800"),
     Service(id="7", title="Dog Handling / K9 Security", slug="dog-handling", icon="Dog",
             description="Highly trained security dog units providing superior detection and deterrence capabilities. Our K9 teams are ideal for high-risk environments, large events, and perimeter security.",
-            features=["Explosive Detection", "Drug Detection", "Intruder Deterrence", "Perimeter Patrols", "Search Operations", "SIA Licensed Handlers"]),
+            features=["Explosive Detection", "Drug Detection", "Intruder Deterrence", "Perimeter Patrols", "Search Operations", "SIA Licensed Handlers"],
+            image="https://images.unsplash.com/photo-1660573579418-6b93160dc15a?w=800"),
 ]
 
 INDUSTRIES = [
     Industry(id="1", title="Corporate", slug="corporate", icon="Buildings", 
-             description="Comprehensive security solutions for offices, headquarters, and corporate campuses. We protect your employees, assets, and confidential information."),
+             description="Comprehensive security solutions for offices, headquarters, and corporate campuses. We protect your employees, assets, and confidential information.",
+             image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"),
     Industry(id="2", title="Retail", slug="retail", icon="Storefront",
-             description="Tailored security for shopping centres, retail parks, and individual stores. Reduce shrinkage while maintaining excellent customer experience."),
+             description="Tailored security for shopping centres, retail parks, and individual stores. Reduce shrinkage while maintaining excellent customer experience.",
+             image="https://images.unsplash.com/photo-1567449303078-57ad995bd17f?w=800"),
     Industry(id="3", title="Construction", slug="construction", icon="Crane",
-             description="Protect your construction sites from theft, vandalism, and trespass. 24/7 coverage for sites of all sizes across the UK."),
+             description="Protect your construction sites from theft, vandalism, and trespass. 24/7 coverage for sites of all sizes across the UK.",
+             image="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800"),
     Industry(id="4", title="Residential", slug="residential", icon="House",
-             description="Security services for residential developments, gated communities, and private estates. Peace of mind for homeowners and residents."),
+             description="Security services for residential developments, gated communities, and private estates. Peace of mind for homeowners and residents.",
+             image="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800"),
     Industry(id="5", title="Events", slug="events", icon="Ticket",
-             description="Professional event security for concerts, festivals, corporate events, and private functions. SIA licensed crowd management specialists."),
+             description="Professional event security for concerts, festivals, corporate events, and private functions. SIA licensed crowd management specialists.",
+             image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800"),
 ]
 
 FAQS = [

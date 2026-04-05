@@ -51,7 +51,7 @@ const whyChooseUs = [
 ];
 
 const milestones = [
-  { year: "2003", event: "Secure Access founded in London" },
+  { year: "2003", event: "B21 Security founded in Birmingham" },
   { year: "2008", event: "Achieved SIA ACS accreditation" },
   { year: "2012", event: "Expanded to nationwide coverage" },
   { year: "2015", event: "Reached 1,000 active security officers" },
@@ -80,7 +80,7 @@ export default function About() {
               Matters Most
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed">
-              For over two decades, Secure Access has been the trusted security
+              For over two decades, B21 Security has been the trusted security
               partner for businesses across the United Kingdom. Our commitment
               to excellence, integrity, and professionalism has made us one of
               the leading security companies in the industry.
@@ -225,13 +225,13 @@ export default function About() {
               viewport={{ once: true }}
             >
               <p className="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-yellow-500 mb-4">
-                The Secure Access Difference
+                The B21 Security Difference
               </p>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold text-white mb-6">
                 Why Choose Us?
               </h2>
               <p className="text-slate-300 leading-relaxed mb-8">
-                When you partner with Secure Access, you're choosing a security
+                When you partner with B21 Security, you're choosing a security
                 company that puts your needs first. Our combination of
                 experience, expertise, and dedication sets us apart from the
                 competition.
@@ -263,7 +263,7 @@ export default function About() {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1770529933902-d2f7851be31c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxzZWN1cml0eSUyMGd1YXJkJTIwdW5pZm9ybXxlbnwwfHx8fDE3NzU0MjY0MTF8MA&ixlib=rb-4.1.0&q=85"
+                src="https://images.pexels.com/photos/7714723/pexels-photo-7714723.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Security guard in uniform"
                 className="w-full h-auto border border-white/10"
               />
@@ -345,7 +345,7 @@ export default function About() {
             </h2>
             <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
               Contact us today to discuss your security requirements and
-              discover how Secure Access can help protect your business.
+              discover how B21 Security can help protect your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

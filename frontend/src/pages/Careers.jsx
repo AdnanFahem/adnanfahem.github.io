@@ -54,7 +54,7 @@ export default function Careers() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <p className="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-yellow-500 mb-4">Careers</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black uppercase text-white mb-6">Join Our Team</h1>
-            <p className="text-lg text-slate-300 leading-relaxed">We're always looking for dedicated professionals to join our growing team of security officers. Start your career with Secure Access today.</p>
+            <p className="text-lg text-slate-300 leading-relaxed">We're always looking for dedicated professionals to join our growing team of security officers. Start your career with B21 Security today.</p>
           </motion.div>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function Careers() {
             </div>
             <div className="mb-6">
               <label className="text-sm uppercase tracking-wider text-slate-400 font-semibold mb-2 block">Cover Letter</label>
-              <textarea value={formData.cover_letter} onChange={(e) => setFormData({ ...formData, cover_letter: e.target.value })} data-testid="career-cover" rows={4} className="bg-[#0A0F1C] border border-white/10 text-white px-4 py-3 w-full focus:outline-none focus:border-yellow-500 placeholder:text-slate-600 resize-none" placeholder="Tell us why you'd like to join Secure Access..." />
+              <textarea value={formData.cover_letter} onChange={(e) => setFormData({ ...formData, cover_letter: e.target.value })} data-testid="career-cover" rows={4} className="bg-[#0A0F1C] border border-white/10 text-white px-4 py-3 w-full focus:outline-none focus:border-yellow-500 placeholder:text-slate-600 resize-none" placeholder="Tell us why you'd like to join B21 Security..." />
             </div>
             <button type="submit" disabled={loading} data-testid="career-submit" className="w-full bg-yellow-500 text-black font-bold px-6 py-4 text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all disabled:opacity-50 flex items-center justify-center gap-2">
               {loading ? "Submitting..." : (<>Submit Application <ArrowRight weight="bold" className="w-4 h-4" /></>)}

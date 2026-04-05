@@ -89,8 +89,8 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1759092913686-5ce5f9da67fe?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwbmlnaHR8ZW58MHx8fHwxNzc1NDI2NDEyfDA&ixlib=rb-4.1.0&q=85"
-            alt="Modern office building at night"
+            src="https://images.unsplash.com/photo-1573575633303-42e3e9fdd6c5?w=1920&q=80"
+            alt="Security professional overlooking city at night"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050810]/95 via-[#050810]/80 to-[#050810]/60" />

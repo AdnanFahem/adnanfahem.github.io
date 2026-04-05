@@ -167,7 +167,7 @@ SERVICES = [
     Service(id="1", title="Manned Guarding", slug="manned-guarding", icon="UserCircle",
             description="Professional SIA-licensed security officers providing 24/7 protection for your premises. Our guards are trained in conflict resolution, first aid, and emergency response.",
             features=["24/7 Coverage", "SIA Licensed Officers", "Incident Reporting", "Access Control", "Patrol Services"],
-            image="https://images.pexels.com/photos/7714723/pexels-photo-7714723.jpeg?auto=compress&cs=tinysrgb&w=800"),
+            image="https://customer-assets.emergentagent.com/job_trusted-guards-uk/artifacts/ji126au5_WhatsApp%20Image%202026-04-06%20at%2000.28.56.jpeg"),
     Service(id="2", title="Event Security", slug="event-security", icon="Calendar",
             description="Comprehensive security solutions for events of all sizes, from corporate functions to large-scale festivals. We ensure your event runs smoothly and safely.",
             features=["Crowd Management", "VIP Protection", "Access Control", "Emergency Planning", "Steward Services"],

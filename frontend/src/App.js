@@ -1,6 +1,7 @@
 import "@/index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
+import { QuoteModalProvider } from "@/context/QuoteModalContext";
 
 // Pages
 import Home from "@/pages/Home";
@@ -19,26 +20,28 @@ import CookieBanner from "@/components/CookieBanner";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#050810]">
-      <BrowserRouter>
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/:slug" element={<ServiceDetail />} />
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-        <CookieBanner />
-      </BrowserRouter>
-      <Toaster position="bottom-right" />
-    </div>
+    <QuoteModalProvider>
+      <div className="min-h-screen bg-[#050810]">
+        <BrowserRouter>
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/:slug" element={<ServiceDetail />} />
+              <Route path="/industries" element={<Industries />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+          <CookieBanner />
+        </BrowserRouter>
+        <Toaster position="bottom-right" />
+      </div>
+    </QuoteModalProvider>
   );
 }
 

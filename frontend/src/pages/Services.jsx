@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, UserCircle, Calendar, HardHat, Eye, Car, ShoppingBag, CheckCircle, Dog } from "@phosphor-icons/react";
 import axios from "axios";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const iconMap = { UserCircle, Calendar, HardHat, Eye, Car, ShoppingBag, Dog };
@@ -10,6 +11,7 @@ const iconMap = { UserCircle, Calendar, HardHat, Eye, Car, ShoppingBag, Dog };
 export default function Services() {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const fetchServices = async () => {
@@ -76,7 +78,7 @@ export default function Services() {
                       </ul>
                       <div className="flex flex-col sm:flex-row gap-4">
                         <Link to={`/services/${service.slug}`} data-testid={`learn-more-${service.slug}`} className="bg-yellow-500 text-black font-bold px-6 py-3 text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all inline-flex items-center justify-center gap-2">Learn More <ArrowRight weight="bold" className="w-4 h-4" /></Link>
-                        <Link to="/pricing" className="bg-transparent border border-white/20 text-white font-bold px-6 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all inline-flex items-center justify-center">Get Quote</Link>
+                        <button onClick={() => openQuoteModal(service.title)} className="bg-transparent border border-white/20 text-white font-bold px-6 py-3 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all inline-flex items-center justify-center">Get Quote</button>
                       </div>
                     </div>
                   </div>
@@ -93,7 +95,7 @@ export default function Services() {
           <p className="text-lg text-black/80 mb-10 max-w-2xl mx-auto">Our security experts can create a tailored package for your specific needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" data-testid="services-cta-contact" className="bg-black text-white font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-[#0A0F1C] transition-all inline-flex items-center justify-center gap-2">Contact Our Team <ArrowRight weight="bold" className="w-5 h-5" /></Link>
-            <Link to="/pricing" className="bg-transparent border-2 border-black text-black font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all inline-flex items-center justify-center">View Pricing</Link>
+            <button onClick={() => openQuoteModal()} className="bg-transparent border-2 border-black text-black font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all inline-flex items-center justify-center">Get Quote</button>
           </div>
         </div>
       </section>

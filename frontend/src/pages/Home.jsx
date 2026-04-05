@@ -23,6 +23,7 @@ import {
   Dog,
 } from "@phosphor-icons/react";
 import axios from "axios";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -60,6 +61,7 @@ export default function Home() {
   const [services, setServices] = useState([]);
   const [testimonials, setTestimonials] = useState([]);
   const [industries, setIndustries] = useState([]);
+  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -116,14 +118,14 @@ export default function Home() {
               events, and properties across the United Kingdom. Available 24/7.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/pricing"
+              <button
+                onClick={() => openQuoteModal()}
                 data-testid="hero-cta-quote"
                 className="bg-yellow-500 text-black font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-yellow-400 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(234,179,8,0.3)] transition-all inline-flex items-center justify-center gap-2 btn-shine"
               >
                 Get a Free Quote
                 <ArrowRight weight="bold" className="w-5 h-5" />
-              </Link>
+              </button>
               <a
                 href="tel:+447943715313"
                 data-testid="hero-cta-call"
@@ -411,14 +413,14 @@ export default function Home() {
               and quote tailored to your specific needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/pricing"
+              <button
+                onClick={() => openQuoteModal()}
                 data-testid="cta-get-quote"
                 className="bg-black text-white font-bold px-8 py-4 text-sm uppercase tracking-wider hover:bg-[#0A0F1C] transition-all inline-flex items-center justify-center gap-2"
               >
                 Get a Free Quote
                 <ArrowRight weight="bold" className="w-5 h-5" />
-              </Link>
+              </button>
               <Link
                 to="/contact"
                 data-testid="cta-contact"

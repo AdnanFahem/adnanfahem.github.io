@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { List, X, Shield, Phone } from "@phosphor-icons/react";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,13 +91,13 @@ export default function Navbar() {
               <Phone weight="duotone" className="w-5 h-5 text-yellow-500" />
               <span>+44 7943 715313</span>
             </a>
-            <Link
-              to="/pricing"
+            <button
+              onClick={() => openQuoteModal()}
               data-testid="nav-quote-button"
               className="hidden md:inline-flex bg-yellow-500 text-black font-bold px-6 py-3 text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all btn-shine"
             >
               Get Quote
-            </Link>
+            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               data-testid="mobile-menu-toggle"
@@ -137,13 +139,13 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/pricing"
+              <button
+                onClick={() => { openQuoteModal(); setIsOpen(false); }}
                 data-testid="mobile-quote-button"
-                className="block bg-yellow-500 text-black font-bold px-4 py-3 text-center uppercase tracking-wider mt-4"
+                className="block w-full bg-yellow-500 text-black font-bold px-4 py-3 text-center uppercase tracking-wider mt-4"
               >
                 Get Quote
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}

@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, UserCircle, Calendar, HardHat, Eye, Car, ShoppingBag, CheckCircle, Phone, Dog } from "@phosphor-icons/react";
 import axios from "axios";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const iconMap = { UserCircle, Calendar, HardHat, Eye, Car, ShoppingBag, Dog };
@@ -11,6 +12,7 @@ export default function ServiceDetail() {
   const { slug } = useParams();
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { openQuoteModal } = useQuoteModal();
 
   useEffect(() => {
     const fetchService = async () => {
@@ -80,8 +82,8 @@ export default function ServiceDetail() {
               <h3 className="text-xl font-bold text-white mb-6">Get Started Today</h3>
               <p className="text-slate-400 mb-8">Contact us for a free consultation and quote tailored to your specific requirements.</p>
               <div className="space-y-4">
-                <Link to="/pricing" data-testid="service-get-quote" className="w-full bg-yellow-500 text-black font-bold px-6 py-4 text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all flex items-center justify-center gap-2">Get a Quote <ArrowRight weight="bold" className="w-4 h-4" /></Link>
-                <a href="tel:+442012345678" className="w-full bg-transparent border border-white/20 text-white font-bold px-6 py-4 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2"><Phone weight="fill" className="w-4 h-4" /> 020 1234 5678</a>
+                <button onClick={() => openQuoteModal(service?.title)} data-testid="service-get-quote" className="w-full bg-yellow-500 text-black font-bold px-6 py-4 text-sm uppercase tracking-wider hover:bg-yellow-400 transition-all flex items-center justify-center gap-2">Get a Quote <ArrowRight weight="bold" className="w-4 h-4" /></button>
+                <a href="tel:+447943715313" className="w-full bg-transparent border border-white/20 text-white font-bold px-6 py-4 text-sm uppercase tracking-wider hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2"><Phone weight="fill" className="w-4 h-4" /> +44 7943 715313</a>
               </div>
             </div>
           </div>

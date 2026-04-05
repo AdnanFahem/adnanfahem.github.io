@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, Buildings, Storefront, Crane, House, Ticket, CheckCircle } from "@phosphor-icons/react";
 import axios from "axios";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const iconMap = { Buildings, Storefront, Crane, House, Ticket };
